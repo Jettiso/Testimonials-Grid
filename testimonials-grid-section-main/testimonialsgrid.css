@@ -1,0 +1,176 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+/* COLOR VARIABLES */
+:root {
+    --primary1: hsl(263, 55%, 52%);
+    --primary2: hsl(217, 19%, 35%);
+    --primary3: hsl(219, 29%, 14%);
+    --primary4: hsl(0, 0%, 100%);
+
+    --neutral1: hsl(0, 0%, 81%);
+    --netural2: hsl(210, 46%, 95%);
+}
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    font-size: 13px;
+    background-color: var(--neutral2);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+main {
+    width: 75%;
+    margin: 8.5rem auto;
+}
+/* GRID CONTAINER */
+.grid-container {
+    height: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:     "section1 section1 section2 section5"
+                             "section3 section4 section4 section5";
+}
+.section-box {
+    border-radius: 5px;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    box-shadow: 2px 2px 15px 1px var(--neutral1);
+}
+.section1 {
+    grid-area: section1 ;
+    background-color:  var(--primary1);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 82% -0%;
+}
+.section2 {
+    grid-area: section2 ; 
+    background-color: var(--primary2) ;
+}
+.section3 {
+    grid-area: section3 ;
+    background-color: var(--primary4) ;
+}
+.section4 {
+    grid-area: section4 ;
+    background-color: var(--primary3);
+}
+.section5 {
+    grid-area: section5 ;
+    background-color: var(--primary4) ;
+}
+img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.section3 > h1 {
+    max-width: 160px;
+}
+/* ALIGNMENTS */
+.user-container {
+    display: flex;
+}
+.flex-user {
+    padding-left: 1rem;
+}
+h1 {
+    padding-top: 15px;
+    max-width: 460px;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comments {
+    max-width: 470px;
+    margin-top: 1rem;
+}
+/* FONT COLORS */
+.white-heading {
+    color: var(--primary4);
+}
+.black-heading {
+    color: var(--primary2);
+}
+.verified-white {
+    color: var(--primary4);
+    opacity: 50%;
+}
+.verified-black{
+    color: var(--primary3);
+    opacity: 50%;
+}
+.comment-white {
+    color: var(--primary4);
+    opacity: 70%;
+}
+.comment-black {
+    color: var(--primary3);
+    opacity: 70%;
+}
+.name-dark {
+    color: var(--primary3);
+}
+.name-white {
+    color: var(--primary4)
+}
+.border-img {
+    border: 2px solid hsl(263, 72%, 66%);
+}
+.border-img2 {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+@media only screen and (max-width: 900px) {
+   
+    main {
+        width: 90%;
+        margin: 6rem auto;
+    }
+    .grid-container {
+       
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr, 6);
+        grid-template-areas:     "section1 "
+                                 "section1 "
+                                 "section2 "
+                                 "section3 "
+                                 "section4 "
+                                 "section4 "
+                                 "section5 "
+                                 "section5 ";
+    }
+}
+
+@media only screen and (max-width: 400px) {
+   .section1 h1 {
+    max-width: 200px;
+   }
+   .section1 p {
+    max-width: 250px;
+}
+.section2 h1 {
+    max-width: 260px;
+}
+.section3 h1 {
+    max-width: 260px;
+}
+.section3 p {
+    max-width: 265px;
+}
+.section4 h1 {
+    max-width: 260px;
+}
+.section4 p {
+    max-width: 260px;
+}
+.section5 p {
+    max-width: 260px;
+}
+}
+    
